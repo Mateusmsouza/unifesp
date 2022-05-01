@@ -1,8 +1,5 @@
 /*
-Considere uma pilha P vazia e uma fila F não vazia. Utilizando apenas os testes de fila
-e pilha vazias, as operações TFila Enfileira, TFila Desenfileira, TPilha Empilha,
-TPilha Desempilha, e uma variável aux do tipo TItem, escreva um procedimento que
-inverte a ordem dos elementos da fila.
+Mostre como implementar uma fila usando duas pilhas. Analise o tempo de execução das operações sobre as filas.
 */
 #include <stack>
 #include <bits/stdc++.h>
