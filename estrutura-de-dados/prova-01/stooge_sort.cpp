@@ -13,20 +13,3 @@ void stoogeSort(int arr[], int left, int right){
         stoogeSort(arr, left, right - t);
     }
 }
-
-void print(int arr[], int n){
-    cout << "[ ";
-    for (int i = 0; i < n; ++i)
-        cout << arr[i] << " ";
-    cout << "]";
-    cout << "\n";
-}
-
-int main(){
-
-    int arr[] = {4,8,1,2,9,4,7,4,2};
-    int n  = sizeof(arr)/sizeof(arr[0]);
-
-    stoogeSort(arr, 0, n-1);
-    print(arr, n);
-}
