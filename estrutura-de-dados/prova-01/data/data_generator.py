@@ -1,3 +1,4 @@
+'''this module is responsible for generating several files with random not repeated integer arrays'''
 import logging
 import sys
 import random
