@@ -1,0 +1,420 @@
+-----------------------------------------------------------
+Quick Sort testing on Unsorted Data with an array of size 10
+comparisions made: 39 / changes made: 20
+time consumed by Quick Sort ordering an array Unsorted Data of size 10 was 0.000003 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Quick Sort testing on Sorted Data with an array of size 10
+comparisions made: 103 / changes made: 74
+time consumed by Quick Sort ordering an array Sorted Data of size 10 was 0.000003 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Quick Sort testing on Reversed Sorted Data with an array of size 10
+comparisions made: 167 / changes made: 103
+time consumed by Quick Sort ordering an array Reversed Sorted Data of size 10 was 0.000003 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Quick Sort testing on Almost Sorted Data with an array of size 10
+comparisions made: 217 / changes made: 138
+time consumed by Quick Sort ordering an array Almost Sorted Data of size 10 was 0.000002 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Merge Sort testing on Unsorted Data with an array of size 10
+comparisions made: 60 / changes made: 78
+time consumed by Merge Sort ordering an array Unsorted Data of size 10 was 0.000003 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Merge Sort testing on Sorted Data with an array of size 10
+comparisions made: 120 / changes made: 156
+time consumed by Merge Sort ordering an array Sorted Data of size 10 was 0.000003 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Merge Sort testing on Reversed Sorted Data with an array of size 10
+comparisions made: 180 / changes made: 234
+time consumed by Merge Sort ordering an array Reversed Sorted Data of size 10 was 0.000003 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Merge Sort testing on Almost Sorted Data with an array of size 10
+comparisions made: 240 / changes made: 312
+time consumed by Merge Sort ordering an array Almost Sorted Data of size 10 was 0.000002 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Heap Sort testing on Unsorted Data with an array of size 10
+comparisions made: 66 / changes made: 28
+time consumed by Heap Sort ordering an array Unsorted Data of size 10 was 0.000003 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Heap Sort testing on Sorted Data with an array of size 10
+comparisions made: 138 / changes made: 59
+time consumed by Heap Sort ordering an array Sorted Data of size 10 was 0.000003 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Heap Sort testing on Reversed Sorted Data with an array of size 10
+comparisions made: 192 / changes made: 81
+time consumed by Heap Sort ordering an array Reversed Sorted Data of size 10 was 0.000003 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Heap Sort testing on Almost Sorted Data with an array of size 10
+comparisions made: 258 / changes made: 109
+time consumed by Heap Sort ordering an array Almost Sorted Data of size 10 was 0.000002 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Insertion Sort testing on Unsorted Data with an array of size 10
+comparisions made: 9 / changes made: 18
+time consumed by Insertion Sort ordering an array Unsorted Data of size 10 was 0.000002 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Insertion Sort testing on Sorted Data with an array of size 10
+comparisions made: 9 / changes made: 9
+time consumed by Insertion Sort ordering an array Sorted Data of size 10 was 0.000003 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Insertion Sort testing on Reversed Sorted Data with an array of size 10
+comparisions made: 9 / changes made: 54
+time consumed by Insertion Sort ordering an array Reversed Sorted Data of size 10 was 0.000003 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Insertion Sort testing on Almost Sorted Data with an array of size 10
+comparisions made: 9 / changes made: 20
+time consumed by Insertion Sort ordering an array Almost Sorted Data of size 10 was 0.000002 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Selection Sort testing on Unsorted Data with an array of size 10
+comparisions made: 45 / changes made: 9
+time consumed by Selection Sort ordering an array Unsorted Data of size 10 was 0.000002 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Selection Sort testing on Sorted Data with an array of size 10
+comparisions made: 45 / changes made: 9
+time consumed by Selection Sort ordering an array Sorted Data of size 10 was 0.000002 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Selection Sort testing on Reversed Sorted Data with an array of size 10
+comparisions made: 45 / changes made: 9
+time consumed by Selection Sort ordering an array Reversed Sorted Data of size 10 was 0.000002 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Selection Sort testing on Almost Sorted Data with an array of size 10
+comparisions made: 45 / changes made: 9
+time consumed by Selection Sort ordering an array Almost Sorted Data of size 10 was 0.000002 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Bubble Sort testing on Unsorted Data with an array of size 10
+comparisions made: 9 / changes made: 9
+time consumed by Bubble Sort ordering an array Unsorted Data of size 10 was 0.000002 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Bubble Sort testing on Sorted Data with an array of size 10
+comparisions made: 9 / changes made: 0
+time consumed by Bubble Sort ordering an array Sorted Data of size 10 was 0.000003 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Bubble Sort testing on Reversed Sorted Data with an array of size 10
+comparisions made: 9 / changes made: 45
+time consumed by Bubble Sort ordering an array Reversed Sorted Data of size 10 was 0.000003 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Bubble Sort testing on Almost Sorted Data with an array of size 10
+comparisions made: 9 / changes made: 11
+time consumed by Bubble Sort ordering an array Almost Sorted Data of size 10 was 0.000003 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Stooge Sort testing on Unsorted Data with an array of size 10
+comparisions made: 728 / changes made: 9
+time consumed by Stooge Sort ordering an array Unsorted Data of size 10 was 0.000004 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Stooge Sort testing on Sorted Data with an array of size 10
+comparisions made: 1456 / changes made: 9
+time consumed by Stooge Sort ordering an array Sorted Data of size 10 was 0.000008 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Stooge Sort testing on Reversed Sorted Data with an array of size 10
+comparisions made: 2184 / changes made: 36
+time consumed by Stooge Sort ordering an array Reversed Sorted Data of size 10 was 0.000005 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Stooge Sort testing on Almost Sorted Data with an array of size 10
+comparisions made: 2912 / changes made: 47
+time consumed by Stooge Sort ordering an array Almost Sorted Data of size 10 was 0.000004 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Quick Sort testing on Unsorted Data with an array of size 100
+comparisions made: 1760 / changes made: 1400
+time consumed by Quick Sort ordering an array Unsorted Data of size 100 was 0.000015 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Quick Sort testing on Sorted Data with an array of size 100
+comparisions made: 6909 / changes made: 6449
+time consumed by Quick Sort ordering an array Sorted Data of size 100 was 0.000039 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Quick Sort testing on Reversed Sorted Data with an array of size 100
+comparisions made: 12058 / changes made: 8998
+time consumed by Quick Sort ordering an array Reversed Sorted Data of size 100 was 0.000027 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Quick Sort testing on Almost Sorted Data with an array of size 100
+comparisions made: 14189 / changes made: 10473
+time consumed by Quick Sort ordering an array Almost Sorted Data of size 100 was 0.000016 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Merge Sort testing on Unsorted Data with an array of size 100
+comparisions made: 1121 / changes made: 1672
+time consumed by Merge Sort ordering an array Unsorted Data of size 100 was 0.000012 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Merge Sort testing on Sorted Data with an array of size 100
+comparisions made: 2002 / changes made: 3032
+time consumed by Merge Sort ordering an array Sorted Data of size 100 was 0.000008 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Merge Sort testing on Reversed Sorted Data with an array of size 100
+comparisions made: 2883 / changes made: 4392
+time consumed by Merge Sort ordering an array Reversed Sorted Data of size 100 was 0.000008 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Merge Sort testing on Almost Sorted Data with an array of size 100
+comparisions made: 3764 / changes made: 5752
+time consumed by Merge Sort ordering an array Almost Sorted Data of size 100 was 0.000009 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Heap Sort testing on Unsorted Data with an array of size 100
+comparisions made: 1586 / changes made: 723
+time consumed by Heap Sort ordering an array Unsorted Data of size 100 was 0.000014 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Heap Sort testing on Sorted Data with an array of size 100
+comparisions made: 2968 / changes made: 1364
+time consumed by Heap Sort ordering an array Sorted Data of size 100 was 0.000014 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Heap Sort testing on Reversed Sorted Data with an array of size 100
+comparisions made: 4102 / changes made: 1881
+time consumed by Heap Sort ordering an array Reversed Sorted Data of size 100 was 0.000012 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Heap Sort testing on Almost Sorted Data with an array of size 100
+comparisions made: 5468 / changes made: 2514
+time consumed by Heap Sort ordering an array Almost Sorted Data of size 100 was 0.000014 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Insertion Sort testing on Unsorted Data with an array of size 100
+comparisions made: 99 / changes made: 1250
+time consumed by Insertion Sort ordering an array Unsorted Data of size 100 was 0.000006 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Insertion Sort testing on Sorted Data with an array of size 100
+comparisions made: 99 / changes made: 99
+time consumed by Insertion Sort ordering an array Sorted Data of size 100 was 0.000002 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Insertion Sort testing on Reversed Sorted Data with an array of size 100
+comparisions made: 99 / changes made: 5049
+time consumed by Insertion Sort ordering an array Reversed Sorted Data of size 100 was 0.000014 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Insertion Sort testing on Almost Sorted Data with an array of size 100
+comparisions made: 99 / changes made: 563
+time consumed by Insertion Sort ordering an array Almost Sorted Data of size 100 was 0.000005 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Selection Sort testing on Unsorted Data with an array of size 100
+comparisions made: 4950 / changes made: 99
+time consumed by Selection Sort ordering an array Unsorted Data of size 100 was 0.000016 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Selection Sort testing on Sorted Data with an array of size 100
+comparisions made: 4950 / changes made: 99
+time consumed by Selection Sort ordering an array Sorted Data of size 100 was 0.000013 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Selection Sort testing on Reversed Sorted Data with an array of size 100
+comparisions made: 4950 / changes made: 99
+time consumed by Selection Sort ordering an array Reversed Sorted Data of size 100 was 0.000014 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Selection Sort testing on Almost Sorted Data with an array of size 100
+comparisions made: 4950 / changes made: 99
+time consumed by Selection Sort ordering an array Almost Sorted Data of size 100 was 0.000013 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Bubble Sort testing on Unsorted Data with an array of size 100
+comparisions made: 99 / changes made: 1151
+time consumed by Bubble Sort ordering an array Unsorted Data of size 100 was 0.000023 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Bubble Sort testing on Sorted Data with an array of size 100
+comparisions made: 99 / changes made: 0
+time consumed by Bubble Sort ordering an array Sorted Data of size 100 was 0.000016 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Bubble Sort testing on Reversed Sorted Data with an array of size 100
+comparisions made: 99 / changes made: 4950
+time consumed by Bubble Sort ordering an array Reversed Sorted Data of size 100 was 0.000044 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Bubble Sort testing on Almost Sorted Data with an array of size 100
+comparisions made: 99 / changes made: 464
+time consumed by Bubble Sort ordering an array Almost Sorted Data of size 100 was 0.000019 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Stooge Sort testing on Unsorted Data with an array of size 100
+comparisions made: 534352 / changes made: 1198
+time consumed by Stooge Sort ordering an array Unsorted Data of size 100 was 0.001234 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Stooge Sort testing on Sorted Data with an array of size 100
+comparisions made: 1065792 / changes made: 1198
+time consumed by Stooge Sort ordering an array Sorted Data of size 100 was 0.001210 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Stooge Sort testing on Reversed Sorted Data with an array of size 100
+comparisions made: 1597232 / changes made: 5728
+time consumed by Stooge Sort ordering an array Reversed Sorted Data of size 100 was 0.001252 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Stooge Sort testing on Almost Sorted Data with an array of size 100
+comparisions made: 2128672 / changes made: 6186
+time consumed by Stooge Sort ordering an array Almost Sorted Data of size 100 was 0.001212 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Quick Sort testing on Unsorted Data with an array of size 1000
+comparisions made: 48748 / changes made: 39031
+time consumed by Quick Sort ordering an array Unsorted Data of size 1000 was 0.000247 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Quick Sort testing on Sorted Data with an array of size 1000
+comparisions made: 550247 / changes made: 539530
+time consumed by Quick Sort ordering an array Sorted Data of size 1000 was 0.003456 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Quick Sort testing on Reversed Sorted Data with an array of size 1000
+comparisions made: 1051746 / changes made: 790029
+time consumed by Quick Sort ordering an array Reversed Sorted Data of size 1000 was 0.002241 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Quick Sort testing on Almost Sorted Data with an array of size 1000
+comparisions made: 1070901 / changes made: 798703
+time consumed by Quick Sort ordering an array Almost Sorted Data of size 1000 was 0.000100 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Merge Sort testing on Unsorted Data with an array of size 1000
+comparisions made: 15752 / changes made: 25726
+time consumed by Merge Sort ordering an array Unsorted Data of size 1000 was 0.000094 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Merge Sort testing on Sorted Data with an array of size 1000
+comparisions made: 27740 / changes made: 45700
+time consumed by Merge Sort ordering an array Sorted Data of size 1000 was 0.000067 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Merge Sort testing on Reversed Sorted Data with an array of size 1000
+comparisions made: 39728 / changes made: 65674
+time consumed by Merge Sort ordering an array Reversed Sorted Data of size 1000 was 0.000067 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Merge Sort testing on Almost Sorted Data with an array of size 1000
+comparisions made: 51716 / changes made: 85648
+time consumed by Merge Sort ordering an array Almost Sorted Data of size 1000 was 0.000082 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Heap Sort testing on Unsorted Data with an array of size 1000
+comparisions made: 24804 / changes made: 11682
+time consumed by Heap Sort ordering an array Unsorted Data of size 1000 was 0.000153 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Heap Sort testing on Sorted Data with an array of size 1000
+comparisions made: 45222 / changes made: 21391
+time consumed by Heap Sort ordering an array Sorted Data of size 1000 was 0.000143 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Heap Sort testing on Reversed Sorted Data with an array of size 1000
+comparisions made: 62856 / changes made: 29708
+time consumed by Heap Sort ordering an array Reversed Sorted Data of size 1000 was 0.000132 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Heap Sort testing on Almost Sorted Data with an array of size 1000
+comparisions made: 83062 / changes made: 39311
+time consumed by Heap Sort ordering an array Almost Sorted Data of size 1000 was 0.000149 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Insertion Sort testing on Unsorted Data with an array of size 1000
+comparisions made: 999 / changes made: 208874
+time consumed by Insertion Sort ordering an array Unsorted Data of size 1000 was 0.000435 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Insertion Sort testing on Sorted Data with an array of size 1000
+comparisions made: 999 / changes made: 999
+time consumed by Insertion Sort ordering an array Sorted Data of size 1000 was 0.000006 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Insertion Sort testing on Reversed Sorted Data with an array of size 1000
+comparisions made: 999 / changes made: 500499
+time consumed by Insertion Sort ordering an array Reversed Sorted Data of size 1000 was 0.001020 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Insertion Sort testing on Almost Sorted Data with an array of size 1000
+comparisions made: 999 / changes made: 60557
+time consumed by Insertion Sort ordering an array Almost Sorted Data of size 1000 was 0.000136 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Selection Sort testing on Unsorted Data with an array of size 1000
+comparisions made: 499500 / changes made: 999
+time consumed by Selection Sort ordering an array Unsorted Data of size 1000 was 0.000950 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Selection Sort testing on Sorted Data with an array of size 1000
+comparisions made: 499500 / changes made: 999
+time consumed by Selection Sort ordering an array Sorted Data of size 1000 was 0.000902 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Selection Sort testing on Reversed Sorted Data with an array of size 1000
+comparisions made: 499500 / changes made: 999
+time consumed by Selection Sort ordering an array Reversed Sorted Data of size 1000 was 0.000917 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Selection Sort testing on Almost Sorted Data with an array of size 1000
+comparisions made: 499500 / changes made: 999
+time consumed by Selection Sort ordering an array Almost Sorted Data of size 1000 was 0.000903 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Bubble Sort testing on Unsorted Data with an array of size 1000
+comparisions made: 999 / changes made: 207875
+time consumed by Bubble Sort ordering an array Unsorted Data of size 1000 was 0.002457 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Bubble Sort testing on Sorted Data with an array of size 1000
+comparisions made: 999 / changes made: 0
+time consumed by Bubble Sort ordering an array Sorted Data of size 1000 was 0.001173 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Bubble Sort testing on Reversed Sorted Data with an array of size 1000
+comparisions made: 999 / changes made: 499500
+time consumed by Bubble Sort ordering an array Reversed Sorted Data of size 1000 was 0.003696 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Bubble Sort testing on Almost Sorted Data with an array of size 1000
+comparisions made: 999 / changes made: 59558
+time consumed by Bubble Sort ordering an array Almost Sorted Data of size 1000 was 0.001519 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Stooge Sort testing on Unsorted Data with an array of size 1000
+comparisions made: 131268834 / changes made: 211899
+time consumed by Stooge Sort ordering an array Unsorted Data of size 1000 was 0.294866 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Stooge Sort testing on Sorted Data with an array of size 1000
+comparisions made: 260408996 / changes made: 211899
+time consumed by Stooge Sort ordering an array Sorted Data of size 1000 was 0.292981 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Stooge Sort testing on Reversed Sorted Data with an array of size 1000
+comparisions made: 389549158 / changes made: 704611
+time consumed by Stooge Sort ordering an array Reversed Sorted Data of size 1000 was 0.297542 seconds 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Stooge Sort testing on Almost Sorted Data with an array of size 1000
+comparisions made: 518689320 / changes made: 763773
+time consumed by Stooge Sort ordering an array Almost Sorted Data of size 1000 was 0.293480 seconds 
+-----------------------------------------------------------
