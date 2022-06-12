@@ -120,10 +120,10 @@ void test_a_million(){
 
 int main(){
 	cout << fixed;
-	test_ten();
-	test_hundred();
-	test_thousand();
-	//test_ten_thousand();
-	//test_hundred_thousand();
-	//test_a_million();
+	//test_ten();
+	//test_hundred();
+	//test_thousand();
+	test_ten_thousand();
+	test_hundred_thousand();
+	test_a_million();
 }
