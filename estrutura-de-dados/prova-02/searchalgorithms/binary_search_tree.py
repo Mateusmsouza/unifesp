@@ -1,9 +1,8 @@
 class Node:
-    def __init__(self, value, letter = ''):
+    def __init__(self, value):
         self.left = None
         self.right = None
         self.value = value
-        self.letter = letter
 
 def height(root):
     if not root:
@@ -12,13 +11,13 @@ def height(root):
         return max(height(root.left), height(root.right)) + 1
 
 
-def insert_bst(root, value, letter = ''):
+def insert_bst(root, value):
     if not root:
-        return Node(value, letter)
+        return Node(value)
     elif value < root.value:
-        root.left = insert_bst(root.left, value, letter)
+        root.left = insert_bst(root.left, value)
     elif value > root.value:
-        root.right = insert_bst(root.right, value, letter)
+        root.right = insert_bst(root.right, value)
     return root
 
 def sucessor(root, right):
@@ -28,8 +27,6 @@ def sucessor(root, right):
             right.left = None
     else:
         root.value = right.value
-        root.letter = right.letter
-        print(root.letter)
         return True
 
 def predecessor(root, left):
@@ -40,8 +37,6 @@ def predecessor(root, left):
     else:
 
         root.value = left.value
-        root.letter = left.letter
-        print(left.letter)
         return True
 
 def remove_bst(root, value):
