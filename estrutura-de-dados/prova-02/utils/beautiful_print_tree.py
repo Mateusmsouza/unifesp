@@ -2,7 +2,7 @@ def printTree(prefix, node, isLeft):
     if node != None:
         print(prefix, end="")
         print("├──" if isLeft else "└──", end="")
-        print(f'{node.letter}-{node.value}')
+        print(f'{node.color}-{node.value}')
 
         printTree( prefix + ("│   " if isLeft else "    "), node.left, True)
         printTree( prefix + ("│   " if isLeft else "    "), node.right, False)
