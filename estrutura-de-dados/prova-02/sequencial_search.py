@@ -1,3 +1,7 @@
+from model.report import Report
+
+REPORT = None
+
 class Node:
     def __init__(self, value) -> None:
         self.next = None
@@ -20,6 +24,7 @@ def insert(root: Node, value: int):
             return False
         root = root.next
     root.next = Node(value)
+    return True
 
 def remove(root: Node, value: int):
     if not root:
@@ -37,10 +42,9 @@ def printList(root):
         print(f'{root.value} -> ', end='')
         root = root.next
 
-if __name__ == '__main__':
-    root = Node(1)
-    insert(root, 32)
-    insert(root, 33)
-    printList(root)
-    remove(root, 32)
-    printList(root)
+def test_with_array(array, size):
+    REPORT = Report(array_size=size)
+    root = Node(array[0])
+
+    for i in array:
+        insert(  )
