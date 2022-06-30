@@ -1,4 +1,5 @@
 import csv
+import numpy as np
 
 class Report:
 
@@ -6,12 +7,12 @@ class Report:
         self.array_size = array_size
         self.array_type = array_type
         self.algo_name = algo_name
-        self.comparisions_insert = 0
-        self.comparisions_search = 0
-        self.comparisions_remove = 0
-        self.time_execution_insert = 0
-        self.time_execution_search = 0
-        self.time_execution_remove = 0
+        self.comparisions_insert = []
+        self.comparisions_search = []
+        self.comparisions_remove = []
+        self.time_execution_insert = []
+        self.time_execution_search = []
+        self.time_execution_remove = []
 
     def create_report(self):
         print(f'[{self.algo_name}] - generating report...')
@@ -24,14 +25,14 @@ class Report:
 
         data_default = [self.algo_name, self.array_size, self.array_type]
         data_media_time = [
-            self.__get_media(self.time_execution_insert, self.array_size),
-            self.__get_media(self.time_execution_search, self.array_size),
-            self.__get_media(self.time_execution_remove, self.array_size)]
+            self.__get_media(self.time_execution_insert),
+            self.__get_media(self.time_execution_search),
+            self.__get_media(self.time_execution_remove)]
 
         data_media_comparisions = [
-            self.__get_media(self.comparisions_insert, self.array_size), 
-            self.__get_media(self.comparisions_search, self.array_size), 
-            self.__get_media(self.comparisions_remove, self.array_size)]
+            self.__get_media(self.comparisions_insert),
+            self.__get_media(self.comparisions_search),
+            self.__get_media(self.comparisions_remove)]
 
         writer.writerow(header_default + header_media_time + header_media_comparisions)
         writer.writerow(data_default + data_media_time + data_media_comparisions)
@@ -41,5 +42,8 @@ class Report:
         print('------------------------------------------------------------------')
         print('')
 
-    def __get_media(self, sum_a, b):
-        return f'{sum_a/b:.10f}'
+    def __get_media(self, sum_a):
+        return np.average(sum_a)
+
+    def __get_standard_derivation(self, sum_a):
+        return np.std(sum_a)
