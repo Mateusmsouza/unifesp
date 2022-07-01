@@ -1,4 +1,4 @@
-import csv
+import csv, os
 import numpy as np
 
 class Report:
@@ -16,7 +16,10 @@ class Report:
 
     def create_report(self):
         print(f'[{self.algo_name}] - generating report...')
-        file = open(f'./generated_csvs/{self.algo_name}_{self.array_size}_{self.array_type}.csv', 'w')
+        path = './generated_csvs'
+        if not os.path.exists(path):
+            os.makedirs(path)
+        file = open(f'{path}/{self.algo_name}_{self.array_size}_{self.array_type}.csv', 'w')
         writer = csv.writer(file)
 
         header_default = ['Nome do Algoritmo', 'Tamanho do Arranjo', 'Cenário testado']
@@ -25,9 +28,9 @@ class Report:
 
         data_default = [self.algo_name, self.array_size, self.array_type]
         data_media_time = [
-            self.__get_media(self.time_execution_insert),
-            self.__get_media(self.time_execution_search),
-            self.__get_media(self.time_execution_remove)]
+            self.__get_media(self.time_execution_insert, True),
+            self.__get_media(self.time_execution_search, True),
+            self.__get_media(self.time_execution_remove, True)]
 
         data_media_comparisions = [
             self.__get_media(self.comparisions_insert),
@@ -42,8 +45,12 @@ class Report:
         print('------------------------------------------------------------------')
         print('')
 
-    def __get_media(self, sum_a):
+    def __get_media(self, sum_a, limit=False):
+        if limit:
+            return f'{np.average(sum_a):.10f}'
         return np.average(sum_a)
 
-    def __get_standard_derivation(self, sum_a):
+    def __get_standard_derivation(self, sum_a, limit_in=0):
+        if limit_in:
+            return f'{np.average(sum_a):.10f}'
         return np.std(sum_a)
