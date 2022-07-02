@@ -20,6 +20,7 @@ DATASET_TEMPLATE_PATHS = [
 ]
 
 def runner(callback: Callable):
+
     for dataset_file_type in DATASET_FILES_TYPES:
         for dataset_template_path in DATASET_TEMPLATE_PATHS:
             array = get_array_from_file(dataset_template_path.format(dataset_file_type))
