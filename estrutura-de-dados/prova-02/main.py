@@ -32,4 +32,4 @@ if __name__ == '__main__':
     print(f'HI MY PID IS {os.getpid()}')
     #runner(callback=sequencial_search_test_with_array)
     #runner(callback=binary_search_test_with_array)
-    #runner(callback=binary_tree_search_test_with_array)
+    runner(callback=binary_tree_search_test_with_array)
