@@ -1,10 +1,13 @@
 from typing import Callable
-from sequencial_search import test_with_array as sequencial_search_test_with_array
+from search_algorithms.sequencial_search import test_with_array as sequencial_search_test_with_array
+from search_algorithms.binary_search import test_with_array as binary_search_test_with_array
+from search_algorithms.binary_tree_search import test_with_array as binary_tree_search_test_with_array
 from data_reader import get_array_from_file
+import sys
 import os
 
 DATASET_FILES_TYPES = [
-    'sorted',
+    #'sorted',
     'unsorted',
     'reversed_sorted',
     'almost_sorted'
@@ -20,7 +23,7 @@ DATASET_TEMPLATE_PATHS = [
 ]
 
 def runner(callback: Callable):
-
+    sys.setrecursionlimit(1000000)
     for dataset_file_type in DATASET_FILES_TYPES:
         for dataset_template_path in DATASET_TEMPLATE_PATHS:
             array = get_array_from_file(dataset_template_path.format(dataset_file_type))
@@ -28,4 +31,6 @@ def runner(callback: Callable):
 
 if __name__ == '__main__':
     print(f'HI MY PID IS {os.getpid()}')
-    runner(callback=sequencial_search_test_with_array)
+    #runner(callback=sequencial_search_test_with_array)
+    #runner(callback=binary_search_test_with_array)
+    runner(callback=binary_tree_search_test_with_array)
