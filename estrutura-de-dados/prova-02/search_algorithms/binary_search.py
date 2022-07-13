@@ -23,24 +23,24 @@ def insert(array, data):
             return
 
 def remove(array, data):
-    global comparisions_insert
+    global comparisions_remove
 
     for i in range(len(array)):
-        comparisions_insert += 1
+        comparisions_remove += 1
         if array[i] == data:
             array.pop(i)
             return
 
 def binary_search(array, left, right, data):
-    global comparisions_insert
+    global comparisions_search
 
     mid = (left + right) // 2
-    comparisions_insert += 3
+    comparisions_search += 3
     if left > right:
-        comparisions_insert -= 2
+        comparisions_search -= 2
         return
     elif data > array[mid]:
-        comparisions_insert -= 1
+        comparisions_search -= 1
         return binary_search(array, mid+1, right, data)
     elif data < array[mid]:
         return binary_search(array, left, mid-1, data)
