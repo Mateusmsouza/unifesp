@@ -60,107 +60,123 @@ def change_color(node: Node):
     return node
 
 def swap_colors(node: Node):
-    node = change_color(node)
-    node.left = change_color(node.left)
-    node.right = change_color(node.right)
-    return node
+    change_color(node)
+    change_color(node.left)
+    change_color(node.right)
 
 def right_rotation(node: Node):
     pB = node.left
     node.left = node.right
     pB.right = node
-    node = pB
-    return node
+    return pB
 
 def left_rotation(node: Node):
     pB = node.right
     node.right = node.left
     pB.left = node
-    node = pB
-    return node
+    return pB
 
 def balance_left(node: Node, nodeB: Node, nodeC: Node):
     print('balancing left')
     if is_red(nodeC.right):
         swap_colors(nodeC)
+        return nodeC
     else:
         if(nodeB == node.right):
-            print('+--------------+')
-            printTreeInterface(node)
+            #print('+--------------+')
             node = left_rotation(node)
-            print('+--------------+')
-            printTreeInterface(node)
-            print('+--------------+')
+            nodeC.left = node
+            #print('+--------------+')
+            #printTreeInterface(node)
+            #print('+--------------+')
         #else:
+        #printTreeInterface(nodeC)
         change_color(node)
         change_color(nodeC)
-        node = right_rotation(nodeC)
-        print('+-------AQUI-------+')
-        printTreeInterface(node)
-        print('+--------------+')
+        #print('+--------------+')
+        right_rotation(nodeC)
 
-    return node
+        return node
 
 def balance_right(node: Node, nodeB: Node, nodeC: Node):
-    if is_red(node.left):
+    print('balancing right')
+    printTreeInterface(nodeC)
+    if is_red(nodeC.left):
         swap_colors(nodeC)
+        return nodeC
     else:
         if(nodeB == node.left):
             node = right_rotation(node)
+            nodeC.right = node
         #else:
         change_color(node)
         change_color(nodeC)
-        node = left_rotation(nodeC)
-
-    return node
+        left_rotation(nodeC)
+        return node
 
 def balance_node(node: Node, nodeB: Node, nodeC: Node):
     if nodeC is not None and is_red(node) and is_red(nodeB):
         if node == nodeC.left:
-            print(f'calling balance left with {node}, {nodeB} and {nodeC}')
             node = balance_left(node, nodeB, nodeC)
+            return node
         else:
             node = balance_right(node, nodeB, nodeC)
+            printTreeInterface(node)
+            return node
     return node
 
 def recursive_insert(node: Node, nodeB: Node, value: int):
 
     if not node:
-        return Node(value=value)
+        return Node(value=value), True
     elif value < node.value:
-        node.left = recursive_insert(node.left, node, value)
+        print('going to left')
+        temp_node, base_case = recursive_insert(node.left, node, value)
+        if base_case:
+            node.left = temp_node
+        else:
+            node = temp_node
         node = balance_node(node, node.left, nodeB)
-        return node
+        #printTreeInterface(node.left)
+        print(f'returning from left {node} - {hex(id(node))} - {node.value}')
+        return node, False
     elif value > node.value:
-        node.right = recursive_insert(node.right, node, value)
-        # print(f'{node.value}')
-        # print(f'{nodeB} - {nodeB.value}')
+        print('going to right')
+        temp_node, base_case = recursive_insert(node.right, node, value)
+        if base_case:
+            node.right = temp_node
+        else:
+            node = temp_node
         node = balance_node(node, node.right, nodeB)
-        return node
-    return node
+        print(f'returning from right {node} - {hex(id(node))} - {node.value} and son is {node.right} - {hex(id(node.right))} - {node.right.value}')
+        #printTreeInterface(node)
+        return node, False
+    else:
+        print(f'returning from else {node} - {hex(id(node))} - {node.value}')
+        return node, False
 
 def insert(root: Node, value: int):
-    root = recursive_insert(root, None, value)
+    print(f'main {root.value if root else root}')
+    print(hex(id(root)))
+    root, _ = recursive_insert(root, None, value)
+    print(hex(id(root)))
+    print(f'main {root.value}')
     root.color = 'black'
-    #print(f'{root.color} - {root.value}')
     return root
 
 def main():
+    # root = Node(value=5)
+    # second = Node(value=2)
+    # second.color = 'red'
+    # root.left = second
+
     root = insert(None, 5)
     root = insert(root, 2)
+    
     root = insert(root, 3)
     root = insert(root, 7)
-    #root = insert(root, 6)
-    # print(f'{root.value} [{root.color}]')
-    # print(f'>>>>{root.right}')
-    # print(f'>>>>{root.left.value} [{root.left.color}]')
-    # print(f'>>>>>>>>{root.left.left.value} [{root.left.left.color}]')
-    # print(f'>>>>>>>>{root.left.right}')
-    # print(f'>>>>>>>>>>>>>>>>{root.left.left.left}')
-    # print(f'>>>>>>>>>>>>>>>>{root.left.left.right.value} [{root.left.left.right.color}]')
-    # print('--------')
-    # print(f'>>>>>>>>>>>>>>>>{root.left.left.right.left.left.value}')
-    # print(f'>>>>>>>>>>>>>>>>{root.left.left.right.left.right}')
+    print('=============================')
+    root = insert(root, 6)
     printTreeInterface(root)
 
 if __name__ == '__main__':
