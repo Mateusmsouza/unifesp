@@ -17,7 +17,6 @@ def insert(array, data):
         comparisions_insert += 2
         if array[i] > data:
             comparisions_insert -= 1
-            print(f'inserting {data} at {i}')
             array.insert(i, data)
             return
         elif array[i] == data:

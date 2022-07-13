@@ -2,25 +2,24 @@ from typing import Callable
 from search_algorithms.sequencial_search import test_with_array as sequencial_search_test_with_array
 from search_algorithms.binary_search import test_with_array as binary_search_test_with_array
 from search_algorithms.binary_tree_search import test_with_array as binary_tree_search_test_with_array
-from search_algorithms.red_black_tree_3 import test_with_array as rbt_tree_search_test_with_array
 from data_reader import get_array_from_file
 import sys
 import os
 
 DATASET_FILES_TYPES = [
     'sorted',
-    'unsorted',
-    'reversed_sorted',
-    'almost_sorted'
+    #'unsorted',
+    #'reversed_sorted',
+    #'almost_sorted'
 ]
 
 DATASET_TEMPLATE_PATHS = [
    './data/{}/data_10.txt',
    './data/{}/data_100.txt',
    './data/{}/data_1000.txt',
-   #'./data/{}/data_10000.txt',
-   #'./data/{}/data_100000.txt',
-   #'./data/{}/data_1000000.txt'
+   './data/{}/data_10000.txt',
+   './data/{}/data_100000.txt',
+   './data/{}/data_1000000.txt'
 ]
 
 def runner(callback: Callable):
@@ -33,6 +32,5 @@ def runner(callback: Callable):
 if __name__ == '__main__':
     print(f'HI MY PID IS {os.getpid()}')
     #runner(callback=sequencial_search_test_with_array)
-    #runner(callback=binary_search_test_with_array)
+    runner(callback=binary_search_test_with_array)
     #runner(callback=binary_tree_search_test_with_array)
-    runner(rbt_tree_search_test_with_array)
