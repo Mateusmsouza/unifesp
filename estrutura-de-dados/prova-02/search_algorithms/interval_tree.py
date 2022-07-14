@@ -1,145 +1,154 @@
-class Node(object):
-    def __init__(self, interval):
+from model.report import Report
+import time
+
+report = None
+ALGO_NAME: str = 'INTERVAL_TREE_SEARCH'
+comparisions_insert = 0
+comparisions_search = 0
+comparisions_remove = 0
+
+class Interval:
+
+    def __init__(self, low, high) -> None:
+        self.low = low
+        self.high = high
+
+class Node:
+
+    def __init__(self, interval: Interval) -> None:
         self.interval = interval
-        self.left_child = None
-        self.right_child = None
-        self.Max = None
-    
-    def hasChild(self):
-        if self.left_child or self.right_child:
-            return True
-        return False
-    
-    def maxOfChild(self):
-        child_interval = list()
-        if(self.left_child):
-            child_interval.append(self.left_child.interval)
-        if(self.right_child):
-            child_interval.append(self.right_child.interval)
-        return max(child_interval)
+        self.max = interval.high
+        self.left = None
+        self.right = None
 
-class IntervalTree(object):
-    def __init__(self, root):
-        self.root = root
+    def get_low(self):
+        return self.interval.low
 
-    def addNode(self, new_node):
-        node = self.root
-        while(node != None):
-            if(new_node.interval[0] <= node.interval[0]):
-                if(node.left_child is None):
-                    node.left_child = new_node
-                    return
-                node = node.left_child
-            else:
-                if(node.right_child is None):
-                    node.right_child = new_node
-                    return
-                node = node.right_child
+def insert(root: Node, interval: Interval):
+    global comparisions_insert
+    comparisions_insert += 2
+    if not root:
+        comparisions_insert -= 1
+        return Node(interval)
 
-    def searchIntervalOverlap(self, query_node):
-        p_node = None
-        c_node = self.root
-        while(c_node):
-            if(self.isOverlapping(c_node.interval, query_node)):
-                print("Overlapping with ", c_node.interval)
-                return p_node, c_node, True
-            else:
-                p_node = c_node
-                if(c_node.Max >= query_node[0]):
-                    c_node = c_node.left_child
-                else:
-                    c_node = c_node.right_child
-        return None, None, False
+    if interval.low >= root.get_low():
+        root.right = insert(root.right, interval)
+    else:
+        root.left = insert(root.left, interval)
 
-    def isOverlapping(self, interval_left, interval_right):
-        if((interval_left[0] <= interval_right[1]) and (interval_right[0] <= interval_left[1])):
-            return True
-        
-        return False
+    comparisions_insert += 1
+    if root.max  < interval.high:
+        root.max = interval.high
 
-    def maxOfSubtree(self, root_node):
-        if((not root_node.Max) and (root_node.hasChild())):
-            max_array = []
-            if(root_node.left_child):
-                self.maxOfSubtree(root_node.left_child)
-                max_array.append(root_node.left_child.Max)
-            if(root_node.right_child):
-                self.maxOfSubtree(root_node.right_child)
-                max_array.append(root_node.right_child.Max)
-            max_array.append(root_node.interval[1])
-            root_node.Max = max(max_array)
-            return
+    return root
 
-        else:
-            root_node.Max = root_node.interval[1]
-            return
+def overlaps(interval_a: Interval, interval_b: Interval):
+    global comparisions_search
+    comparisions_search += 2
+    return (interval_a.low <= interval_b.high) and (interval_b.low <= interval_a.high)
 
-    def constructMax(self):
-        node = self.root
-        self.maxOfSubtree(node)
+def find_overlap(root: Node, interval: Interval):
+    global comparisions_search
 
-    def printTree(self):
-        node_list = [self.root]
-        while(len(node_list) != 0):
-            current_node = node_list[0]
-            node_list.pop(0)
-            print(current_node.interval, current_node.Max)
-            if(current_node.left_child is not None):
-                node_list.append(current_node.left_child)
-            if(current_node.right_child is not None):
-                node_list.append(current_node.right_child)
+    comparisions_search += 1
+    if not root:
         return
-    
-    
-    def delete_node(self, node_):
-        parent_node, node_to_delete, _ = self.searchIntervalOverlap(node_)
 
-        # If no overlap
-        if not node_to_delete:
-            return False
+    comparisions_search += 1
+    if overlaps(root.interval, interval):
+        return root.interval
+    
+    comparisions_search += 2
+    if root.left and root.left.max >= interval.low:
+        return find_overlap(root.left, interval)
+    return find_overlap(root.right, interval)
 
-        if node_to_delete.hasChild():
-            if node_to_delete.left_child:
-                if self.whichChild(parent_node, node_to_delete) == "left":
-                    parent_node.left_child = node_to_delete.left_child
-                else:
-                    parent_node.right_child = node_to_delete.left_child
-                self.reloadTree(node_to_delete.right_child)
-            else:
-                if self.whichChild(parent_node, node_to_delete) == "left":
-                    parent_node.left_child = node_to_delete.right_child
-                else:
-                    parent_node.right_child = node_to_delete.right_child   
+def min_low_interval(root):
+    global comparisions_remove
+    while root.left:
+        comparisions_remove += 1
+        root = root.left
+
+    comparisions_remove += 1
+    return root
+
+def delete(root: Node, interval: Interval):
+    global comparisions_remove
+
+    comparisions_remove += 1
+    if not root:
+        return None
+
+    comparisions_remove += 2
+    if interval.low < root.get_low():
+        comparisions_remove -= 1
+        root.left = delete(root.left, interval)
+    elif interval.low > root.get_low():
+        root.right = delete(root.right, interval)
+    else:
+        comparisions_remove += 1
+        if interval.high == root.interval.high:
+            # actually delete
+            comparisions_remove += 2
+            if root.left == None:
+                comparisions_remove -=1
+                return root.right
+            elif root.right == None:
+                return root.left
+            min_interal = min_low_interval(root.right);
+            root.interval = min_interal.interval
+            root.right = delete(root.right, min_interal.interval);
         else:
-            if parent_node.left_child == node_to_delete:
-                parent_node.left_child = None
-            if parent_node.right_child == node_to_delete:
-                parent_node.right_child = None
-            return True
+            root.right = delete(root.right, interval)
     
-    def whichChild(self, p_node, c_node):
-        if p_node.left_child == c_node:
-            return "left"
-        if p_node.right_child == c_node:
-            return "right"
-    
-    def reloadTree(self, node_):
-        if node_.hasChild():
-            if node_.left_child:
-                self.reloadTree(node_.left_child)
-            if node_.right_child:
-                self.reloadTree(node_.left_child)
-        else:
-            self.addNode(node_)
+    comparisions_remove += 1
+    root.max=max(root.interval.high, 0 if not root.left else root.left.max, 0 if not root.right else root.right.max)
+    return root
 
-if __name__ == '__main__':
-    It = IntervalTree(Node([15, 20]))
-    It.addNode(Node([10, 30]))
-    It.addNode(Node([17, 19]))
-    It.addNode(Node([5, 20]))
-    It.addNode(Node([12, 15]))
-    It.addNode(Node([30, 40]))
-    It.constructMax()
-    It.printTree()
-    print(It.searchIntervalOverlap([6, 7])[2])
-    It.delete_node([9, 11])
+def test_with_array(array, size, scenario):
+    global report
+    global comparisions_insert
+    global comparisions_search
+    global comparisions_remove
+
+
+    print(f'[{ALGO_NAME}] - initializing tests for array scenario/size: {scenario}/{size}')
+    report = Report(array_size=size, algo_name=ALGO_NAME, array_type=scenario)
+    root = None
+
+    print(f'[{ALGO_NAME}] - testing insertion')
+    for i in range(0, len(array)):
+        if i + 2 <= len(array)-1:
+            interval = Interval(array[i], array[i+2])
+            start_time = time.process_time()
+            insert(root, interval)
+            end_time = time.process_time()
+            report.time_execution_insert.append(end_time - start_time)
+            report.comparisions_insert.append(comparisions_insert)
+    comparisions_insert = 0
+    report.consolidate_insertion()
+
+    print(f'[{ALGO_NAME}] - testing search')
+    for i in range(0, len(array)):
+        if i + 2 <= len(array)-1:
+            interval = Interval(array[i], array[i+2])
+            start_time = time.process_time()
+            find_overlap(root, interval)
+            end_time = time.process_time()
+            report.time_execution_search.append(end_time - start_time)
+            report.comparisions_search.append(comparisions_search)
+    comparisions_search = 0
+    report.consolidate_search()
+
+    print(f'[{ALGO_NAME}] - testing remove')
+    for i in range(0, len(array)):
+        if i + 2 <= len(array)-1:
+            interval = Interval(array[i], array[i+2])
+            start_time = time.process_time()
+            delete(root, interval)
+            end_time = time.process_time()
+            report.time_execution_remove.append(end_time - start_time)
+            report.comparisions_remove.append(comparisions_remove)
+    comparisions_remove = 0
+    report.consolidate_remove()
+    report.create_report()

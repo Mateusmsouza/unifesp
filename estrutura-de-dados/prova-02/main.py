@@ -3,6 +3,7 @@ from search_algorithms.sequencial_search import test_with_array as sequencial_se
 from search_algorithms.binary_search import test_with_array as binary_search_test_with_array
 from search_algorithms.binary_tree_search import test_with_array as binary_tree_search_test_with_array
 from search_algorithms.red_black_tree_3 import test_with_array as rbt_tree_search_test_with_array
+from search_algorithms.interval_tree2 import test_with_array as interval_tree_test_with_array
 from data_reader import get_array_from_file
 import sys
 import os
@@ -35,4 +36,5 @@ if __name__ == '__main__':
     #runner(callback=sequencial_search_test_with_array)
     #runner(callback=binary_search_test_with_array)
     #runner(callback=binary_tree_search_test_with_array)
-    runner(callback=rbt_tree_search_test_with_array)
+    #runner(callback=rbt_tree_search_test_with_array)
+    runner(callback=interval_tree_test_with_array)
