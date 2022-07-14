@@ -16,12 +16,12 @@ DATASET_FILES_TYPES = [
 ]
 
 DATASET_TEMPLATE_PATHS = [
-   './data/{}/data_10.txt',
-   './data/{}/data_100.txt',
-   './data/{}/data_1000.txt',
-   './data/{}/data_10000.txt',
-   './data/{}/data_100000.txt',
-   #'./data/{}/data_1000000.txt'
+   #'./data/{}/data_10.txt',
+   #'./data/{}/data_100.txt',
+   #'./data/{}/data_1000.txt',
+   #'./data/{}/data_10000.txt',
+   #'./data/{}/data_100000.txt',
+   './data/{}/data_1000000.txt'
 ]
 
 def runner(callback: Callable):
